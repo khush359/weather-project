@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,200;0,400;0,900;1,200&family=Poppins:ital,wght@1,300&family=Raleway:ital,wght@1,400;1,500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Piazzolla",serif;
+}
+:root{
+    --main-bg: #1e272e;
+    --main-color: #0097e6;
+}
+body{
+    min-height: 100vh;
+}
+.row{
+    margin: 0;
+}
+
+/* navbar */
+.main-menu{
+    background-color: var(--main-bg);
+}
+.navbar{
+    color: #fff;
+    background-color: var(--main-bg);
+    padding: 2rem 0;
+}
+.navbar a{
+    color: #fff;
+    font-size: 1.3rem;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+.navbar-toggler-icon{
+    background-color: #fff;
+    /* color: #fff; */
+}
+.navbar li{
+    margin: 0 5px;
+}
+.fa-snowflake{
+    transition: all linear;
+    animation: rote 2s linear infinite;
+    color:var(--main-color);
+}
+@keyframes rote{
+ 0%{
+    transform: rotate(0deg);
+ }
+ 100%{
+    transform: rotate(360deg);
+ }
+}
+
+/* main body */
+.main_header{
+    margin: 20px 0;
+}
+.main_header_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* height: 70rem; */
+}
+.main_header_left p{
+    font-size: 1.4rem;
+}
+.main_header_left h1{
+    margin:0 0 30px 0;
+    text-transform: capitalize;
+}
+.main_header_left .text{
+    color: blue;
+}
+.main_header_left button{
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    border: none;
+   box-shadow: 0 8px 6px -6px #000;
+    font-weight: 900;
+    border-radius: 2rem;
+    outline: none;
+    cursor: pointer;
+}
+.main_header_left button:hover{
+    box-shadow: 0 8px 6px -6px var(--main-color);
+}
+.main_header_right figure img{
+    filter: drop-shadow(0 0.5 1rem rgba(0,0,0,0.3));
+}
+/* figure img{
+    width: 50rem;
+    height: 20rem;
+} */
+
+
+/* weather page */
+.tempInfo{
+    width: 30rem;
+    height: 20rem;
+    margin: 30px auto;
+    min-height: 20rem;
+    background-color: #70c7ec;
+    border-radius: 1rem;
+     padding: 1rem;
+    font-family: "Roboto",sans-serif;
+    }
+.top_layer{
+    width: 100%;
+    height: 15%;
+    background-color: #d1eff7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    
+}
+.top_layer p{
+    color: black;
+    font-weight: 500;
+    padding: 1rem;
+}
+.main_layer{
+    width: 100%;
+    height: 80%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.main_layer .city_name{
+    /* padding: 2rem 0; */
+    font-weight: 500;
+    font-size: 2rem;
+}
+.main_layer .middle_layer{
+    display: flex;
+    justify-content: space-around;
+}
+.main_layer .middle_layer p,
+.main_layer .middle_layer .fa-cloud{
+     font-size: 3.2rem;
+     font-weight: 900;
+}
+.main_layer .middle_layer .fa{
+    color: #fff;
+}
+sup{
+    font-size: 3.2rem;
+    margin-top: -2rem;
+}
+.data_hide{
+    visibility: hidden;
+    transition: all 0.3 linear;
+}
+/* form input tag */
+.temp_form{
+    width: 60%;
+    position: relative;
+    margin: 3rem auto 3rem;
+}
+.temp_form input[type="text"]{
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #d1eff7;
+    outline: none;
+    border: none;
+    font-size: 1.4rem;
+    border-radius: 3rem;
+}
+.temp_form input[type="submit"]{
+ position: absolute;
+ top: 5px;
+ right: 5px;
+ bottom: 5px;
+ border: none;
+ border-radius: 1.5rem;
+ cursor: pointer;
+ font-size: 1.1rem;
+ padding: 0 3rem;
+ /* background-color: #70c7ec;  */
+ /* background-color: var(--main-color); */
+ background-color: white;
+ color: #0097e6;
+}
+.temp_form input[type="submit"]:hover{
+background-color:#70c7ec; ;
+color: white;
+}
+
+
+
+
+/* footer */
+footer{
+    background-color:var(--main-bg);
+    width: 100%;
+    /* margin-bottom: auto; */
+    /* margin-top: auto; */
+}
+footer p{
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 55px;
+}
+
+@media (max-width: 768px) {
+    .temp_form{
+        width: auto;
+       
+    }
+    .tempInfo{
+        width: auto;
+    }
+    .main_layer .middle_layer p,
+    .main_layer .middle_layer .fa-cloud{
+         font-size: 3rem;
+    }
+}
